@@ -11,10 +11,10 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         boolean exit = false;
 
-        while (!exit) {
-            System.out.println("How many random number do you need?");
-            int inputNum = sc.nextInt();
+        System.out.println("How many random number do you need?");
+        int inputNum = sc.nextInt();
 
+        while (!exit) {
             List<Integer> randomNumbers = getRandomNumbers(inputNum);
             System.out.println("Random numbers: " + randomNumbers);
 
@@ -33,6 +33,7 @@ public class Main {
                 exit = true;
             } else {
                 System.out.println("Invalid input. Please enter Y or N (press E to exit)");
+                continue;
             }
             if (!exit) {
                 List<Integer> evenOddNumbers = printEvenOddList(randomNumbers, choice);
