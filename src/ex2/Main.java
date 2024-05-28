@@ -1,9 +1,6 @@
 package ex2;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -49,6 +46,7 @@ public class Main {
         for (int i = 0; i < inputNum; i++) {
             numbers.add(random.nextInt(0, 100));
         }
+        Collections.sort(numbers);
         return numbers;
     }
 
